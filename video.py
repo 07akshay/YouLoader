@@ -1,0 +1,12 @@
+def video(source):
+    vlc_instance = vlc.Instance()
+    player = vlc_instance.media_player_new()
+    media = vlc_instance.media_new(source)
+    player.set_media(media)
+    player.play()
+    frame2 = LabelFrame(root)
+    frame2.grid(row=3,column=1,columnspan=2)
+    pa = Button(frame2,text="Play/Pause",fg='black',bg='white',font = Desired_font,command=lambda:player.pause())
+    pa.grid(row=0,column=0,columnspan=1)
+    st = Button(frame2,text="Stop",fg='black',bg='white',font = Desired_font,command=lambda:player.stop())
+    st.grid(row=0,column=1,columnspan=1)
