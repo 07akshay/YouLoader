@@ -18,6 +18,12 @@ import sqlite3
 import webbrowser
 import speech_recognition as sr
 
+import browse
+import src
+import speech
+import database
+import photoapp
+
 
 cap = cv2.VideoCapture(0)
 while (cap.isOpened()):
